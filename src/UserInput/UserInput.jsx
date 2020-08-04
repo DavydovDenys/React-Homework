@@ -1,10 +1,12 @@
 import React from "react";
+import "./UserInput.css"
 
-
-const UserInput = () => {
+const UserInput = (props) => {
   return (
     <div className='UserInput'>
-      <input type="text"/>
+      <input onChange={props.changed} value={props.name} onClick={props.click} className='Input' type="text"/>
     </div>
   )
 }
+
+export default UserInput;
